@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+        {{ content }}
+    </main>
+
+    <script>
+      var disclaimerBox = document.querySelector('.disclaimer');
+      var disclaimerButton = document.querySelector('.disclaimer-close');
+      disclaimerButton.addEventListener('click', function(){
+        disclaimerButton.parentNode.parentNode.removeChild(disclaimerBox);
+      });
+    </script>
+  </body>
+
+</html>

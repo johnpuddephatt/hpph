@@ -1,0 +1,217 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  @media screen and (orientation: landscape) {
+    flex-direction: row;
+  }
+}
+
+
+.home-image {
+  flex: 0 0 30%;
+  padding: $base-spacing;
+  display: flex;
+  align-items: flex-end;
+  @media screen and (orientation: landscape) {
+    @include srcset('/assets/images/hpph-l.jpg', 50%);
+  }
+  @media screen and (orientation: portrait) {
+    @include srcset('/assets/images/hpph-l.jpg', 100%);
+  }
+  // background-image: url(./images/hpph-l.jpg);
+  background-size: cover;
+  background-position: center 70%;
+  @media screen and (orientation: landscape) {
+    flex: 0 0 40%;
+    background-position: bottom;
+  }
+  @media screen and (min-width: $large-screen) {
+    flex: 0 0 50%;
+  }
+}
+
+.listings {
+  flex: 0 0 70%;
+  height:100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  @media screen and (orientation: landscape) {
+    flex: 0 0 60%;
+  }
+  @media screen and (min-width: $large-screen) {
+    flex: 0 0 50%;
+  }
+  h1 {
+    font-size: modular-scale(2);
+    text-transform: uppercase;
+    font-weight: 900;
+    display: none;
+    @media screen and (min-width: $large-screen) {
+      display: block;
+    }
+  }
+  h2 {
+    margin: $base-spacing 0 $small-spacing;
+    font-size: modular-scale(0);
+    text-transform: uppercase;
+  }
+  table {
+    text-transform: uppercase;
+    font-size: modular-scale(-1);
+    td:first-child {
+      width: 3.5 * $base-spacing;
+      padding-right: $small-spacing;
+      padding-left: $small-spacing;
+    }
+    td {
+      // border-bottom-color: $light-gray;
+      border-bottom: none;
+    }
+  }
+  span {
+    font-size: modular-scale(-1);
+  }
+  .label {
+    display: inline-block;
+    padding: .3em .2em 0;
+    line-height: .9em;
+  }
+}
+
+.listings--social {
+  height: $base-spacing;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  flex: 0 0 auto;
+  margin-top: $small-spacing;
+  margin-bottom: $small-spacing;
+  margin-right: $small-spacing;
+
+
+  li {
+    display: inline-block;
+    margin-left: $small-spacing/3;
+  }
+  a {
+    display: block;
+    position: relative;
+    width: $base-spacing;
+    height: $base-spacing;
+  }
+  svg {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+}
+.listings--header {
+  flex: 0 0 auto;
+  @media screen and (min-width: $large-screen) {
+    margin: 0 2 * $base-spacing 0;
+  }
+  @media screen and (min-width: $xl-screen) {
+    margin: 0 4 * $base-spacing 0;
+  }
+  .hpph-logo {
+    display: block;
+    width: 30%;
+    max-width: 12rem;
+    height: auto;
+    margin: 0 auto $small-spacing;
+    margin-top: -(1.5 * $base-spacing);
+    @media screen and (orientation: portrait) {
+      width: 35%;
+    }
+    @media screen and (min-width: $large-screen) {
+      width: 75%;
+      margin: 0 auto $base-spacing;
+    }
+
+
+  }
+  .disclaimer {
+    font-size: modular-scale(-2);
+    border-top: $base-border;
+    padding: $small-spacing;
+    display: none;
+    position: relative;
+
+    @media screen and (orientation: portrait) {
+      padding: $small-spacing 1.5 * $base-spacing;
+      display: block;
+    }
+    @media screen and (min-width: $large-screen) {
+      display: block;
+      padding: $base-spacing 1 * $base-spacing;
+    }
+    text-align: center;
+  }
+  .disclaimer-close {
+    height: 1 * $base-spacing;
+    width: 1 * $base-spacing;
+    border-radius: 50%;
+    background-color: $light-gray;
+    color: $medium-gray;
+    font-weight: 400;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: .25 * $base-spacing;
+    @media screen and (min-width: $large-screen) {
+      display: none;
+    }
+    transform: translateY(-50%);
+    font-size: modular-scale(2);
+  }
+}
+
+.listings--content {
+  border-top: $base-border;
+  flex: 1 1 auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: $small-spacing $small-spacing;
+  @media screen and (orientation: portrait) {
+    padding: $small-spacing $base-spacing;
+  }
+  @media screen and (min-width: $large-screen) {
+    padding: $base-spacing 0;
+    margin: 0 2 * $base-spacing;
+  }
+  @media screen and (min-width: $xl-screen) {
+    padding: 2 * $base-spacing 0;
+    margin: 0 4 * $base-spacing;
+  }
+}
+.listings--footer {
+  flex: 0 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $small-spacing;
+  border-top: $base-border;
+  @media screen and (orientation: portrait) {
+    padding: $small-spacing $base-spacing;
+  }
+  @media screen and (min-width: $large-screen) {
+    padding: $base-spacing 0;
+    margin: 0 2 * $base-spacing;
+  }
+  @media screen and (min-width: $xl-screen) {
+    margin: 0 4 * $base-spacing;
+  }
+  .button {
+    font-size: modular-scale(-1);
+    line-height: .8em;
+    padding-top: .95em;
+  }
+}
+
+.listings--footer--contact {
+  font-size: modular-scale(-2);
+}

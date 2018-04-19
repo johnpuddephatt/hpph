@@ -1,0 +1,9 @@
+@include font-face("Avant Garde", "./fonts/ITCAvantGardePro-Bold", $file-formats: woff2 woff){
+  font-style: normal;
+  font-weight: 700;
+}
+
+@include font-face("Avant Garde", "./fonts/ITCAvantGardePro-Md", $file-formats: woff2 woff){
+  font-style: normal;
+  font-weight: 400;
+}

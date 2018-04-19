@@ -1,0 +1,16 @@
+---
+---
+
+$cloudinary: {{ site.cloudinary }}
+$sizes: {% for breakpoint in site.breakpoints %}{{ breakpoint }}px,{% endfor%}
+$baseurl: '{{ site.url }}{{ site.baseurl }}'
+
+@import 'bourbon/bourbon'
+@import 'base/base'
+@import 'neat/neat'
+
+@import 'srcset'
+
+@import 'labels'
+@import 'home'
+@import 'navigation'
