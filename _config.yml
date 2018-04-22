@@ -17,13 +17,14 @@ title: Hyde Park Picture House
 email: john@jdp.org.uk
 description: |
   The cosiest cinema in Leeds
-baseurl: "/preview" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.hydeparkpicturehouse.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_username: hydeparkph
 facebook_username: TheHydeParkPictureHouse
 instagram_username: hydeparkph
 
+google_analytics: UA-48108307-1
 cloudinary: letsdance
 
 header_pages:
@@ -38,10 +39,7 @@ exclude:
 collections:
   films:
     output: true
-    permalink: /:title/index.html
-social:
-  - name: twitter
-    url: https://twitter.com/hydeparkph
+    permalink: /film/:title/index.html
 
 defaults:
   - scope:
@@ -51,6 +49,11 @@ defaults:
         path: /assets/images/opengraph.jpg
         height: 1200
         width: 1200
+  - scope:
+      path: ""
+      type: films
+    values:
+      layout: film
 
 breakpoints:
   - 320

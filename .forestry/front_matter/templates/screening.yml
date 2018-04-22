@@ -1,0 +1,22 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: date
+  label: Date & Time
+  type: date
+  hidden: false
+  default:
+- name: Tags
+  label: Tags
+  type: tag_list
+  hidden: false
+  default:
+- type: select
+  name: film
+  label: Film
+  hidden: false
+  config:
+    source:
+      type: pages
+      section: films

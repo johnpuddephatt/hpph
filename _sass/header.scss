@@ -1,0 +1,87 @@
+.header--social {
+  height: $base-spacing;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  flex: 0 0 auto;
+  margin-top: $small-spacing;
+  margin-bottom: $small-spacing;
+  margin-right: $small-spacing;
+
+
+  li {
+    display: inline-block;
+    margin-left: $small-spacing/3;
+  }
+  a {
+    display: block;
+    position: relative;
+    width: $base-spacing;
+    height: $base-spacing;
+  }
+  svg {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+}
+.header--masthead {
+  flex: 0 0 auto;
+  @media screen and (min-width: $large-screen) {
+    margin: 0 2 * $base-spacing 0;
+  }
+  @media screen and (min-width: $xl-screen) {
+    margin: 0 4 * $base-spacing 0;
+  }
+  .hpph-logo {
+    display: block;
+    width: 30%;
+    max-width: 12rem;
+    height: auto;
+    margin: 0 auto $small-spacing;
+    margin-top: -(1.5 * $base-spacing);
+    @media screen and (orientation: portrait) {
+      width: 35%;
+    }
+    @media screen and (min-width: $large-screen) {
+      width: 75%;
+      margin: 0 auto $base-spacing;
+    }
+
+
+  }
+  .disclaimer {
+    font-size: modular-scale(-2);
+    border-top: $base-border;
+    padding: $small-spacing;
+    display: none;
+    position: relative;
+
+    @media screen and (orientation: portrait) {
+      padding: $small-spacing 1.5 * $base-spacing;
+      display: block;
+    }
+    @media screen and (min-width: $large-screen) {
+      display: block;
+      padding: $base-spacing 1 * $base-spacing;
+    }
+    text-align: center;
+  }
+  .disclaimer-close {
+    height: 1 * $base-spacing;
+    width: 1 * $base-spacing;
+    border-radius: 50%;
+    background-color: $light-gray;
+    color: $medium-gray;
+    font-weight: 400;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: .25 * $base-spacing;
+    @media screen and (min-width: $large-screen) {
+      display: none;
+    }
+    transform: translateY(-50%);
+    font-size: modular-scale(2);
+  }
+}

@@ -11,7 +11,19 @@ html {
 html,
 body {
   height: 100%;
+  overflow: hidden;
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  transition: transform $base-duration $base-timing;
+  @media screen and (orientation: landscape) {
+    flex-direction: row;
+  }
 }

@@ -1,0 +1,57 @@
+<div class="listings--content">
+  {% capture next_seven_days %}
+  {{ "now" | date: "%Y-%m-%d" }},
+  {{ "now" | date: "%s" | plus: 86400 | date: "%Y-%m-%d" }},
+  {{ "now" | date: "%s" | plus: 172800 | date: "%Y-%m-%d" }},
+  {{ "now" | date: "%s" | plus: 259200 | date: "%Y-%m-%d" }},
+  {{ "now" | date: "%s" | plus: 345600 | date: "%Y-%m-%d" }},
+  {{ "now" | date: "%s" | plus: 432000 | date: "%Y-%m-%d" }},
+  {{ "now" | date: "%s" | plus: 518400 | date: "%Y-%m-%d" }}
+  {% endcapture %}
+
+  {% assign next_seven_days = next_seven_days | split: ',' %}
+
+
+  <h1 class="listings--title">Film schedule</h1>
+  {% for day in next_seven_days %}
+  {% assign this_date = day | date: "%Y-%m-%d"%}
+  <h2 class="listings--date">{{ day | date: "%a %d %B"}}</h2>
+  <div class="listings--entries">
+    {% for film in site.films %}
+    {% for screening in film.screenings %}
+    {% assign film_date = screening.date | date: "%Y-%m-%d" %}
+    {% if film_date == this_date %}
+
+    <a class="listings--entry" href="{{ film.url | replace: 'index.html', ''}}">
+    <span class="listings--entry--date">{{ screening.date | date:"%I.%M%p" }}:</span>
+    <span class="listings--entry--title">{{film.title}}</span>
+    <span class="listings--entry--certificate">({{film.certificate}})</span>
+    {% for label in screening.labels %}<span class=" label label--{{ label | downcase | replace:' ','-' | replace:'&','-' | replace: '---', '-' }}">{{ label }}</span>{% endfor %}
+    </a>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </div>
+  {% endfor%}
+
+{% assign filtered = site.films | where:"path","_films/custody.md" %}
+  {% for something in filtered %}
+
+  {{ something.path }}
+
+  {% endfor %}
+
+
+
+{% assign screeningtimes = '' %}
+{% capture appended_array %}
+  {% for film in site.films %}
+    {% for screening in film.screenings %}
+      {{ screening.date | date: "%s" }},
+    {% endfor %}
+  {% endfor %}
+{% endcapture %}
+
+{{ appended_array }}
+
+</div>

@@ -3,7 +3,7 @@ layout: home
 ---
 
 
-# Film Schedule
+<h1 class="listings--title">Film Schedule</h1>
 
 <!-- ## Wed 18 April
 
@@ -29,7 +29,7 @@ layout: home
 02.30pm:| **Stalker + Anne Hardy short** <span class="certificate">(PG)</span>
 06.00pm:| **Custody** <span class="certificate">(15)</span>
 08.15pm:| **Thoroughbreds** <span class="certificate">(15)</span>
-10.30pm:| **Unsane** <span class="certificate">(15)</span>
+10.30pm:| **Unsane** <span class="certificate">(15)</span> <span class="label label--creatures-of-the-night">Creatures of the Night</span>
 
 ## Sun 22 April
 
@@ -47,7 +47,7 @@ layout: home
 ## Tue 24 April
 
 04.00pm:| **Westwood: Punk, Icon, Activist** <span class="certificate">(15)</span>
-06.20pm:| **Erase and Forget** <span class="certificate">(18)</span>
+06.20pm:| **Erase and Forget** <span class="certificate">(18)</span> <span class="label label--tuesday-wonder">Tuesday Wonder</span>
 08.50pm:| **Custody** <span class="certificate">(15)</span>
 
 ## Wed 25 April

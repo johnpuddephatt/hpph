@@ -5,8 +5,10 @@
   &--byobaby {
     background-color: $byo-baby;
   }
-  &--creatures {
+  &--creatures-of-the-night {
   background-color: $creatures;
+  color: white;
+  -webkit-font-smoothing: antialiased;
   }
   &--hyde-seek {
   background-color: $hide-seek;

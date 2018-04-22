@@ -1,0 +1,30 @@
+---
+layout: home
+---
+<img src="{{ page.banner }}" alt="">
+
+<h1 class="film--title">{{ page.title }}</h1>
+<ul>
+  <li>Cert. {{ page.certificate }}</li>
+  <li>{{ page.runtime}} mins</li>
+  <li><em>From {{ page.screenings.first.date | date: "%a %d %B" }}</em></li>
+</ul>
+
+
+
+<div>Cory Finley’s directorial debut see’s childhood friends Lily and Amanda reconnect in suburban Connecticut after years of growing apart. Lily has turned into a polished, upperclass teenager, whilst Amanda is in the process of becoming a social outcast. Though they initially seem completely at odds, their friendship grows and they begin to bring out one another’s most destructive tendencies - in this dark, bold and wickedly funny film - sadly to be actor Anton Yelchin’s last.</div>
+
+
+<h3>Screenings</h3>
+{% assign today = "now" | date: "%Y-%m-%d" | date: "%s" %}
+
+{% for screening in page.screenings %}
+{% assign film_date = screening.date | date: "%s" %}
+{% if film_date >= today %}
+
+<span class="listings--entry--date">{{ screening.date | date:"%I.%M%p" }}</span>
+{% for label in screening.labels %}<span class=" label label--{{ label | downcase | replace:' ','-' | replace:'&','-' | replace: '---', '-' }}">{{ label }}</span>{% endfor %}
+
+{% endif %}
+{% endfor %}
+

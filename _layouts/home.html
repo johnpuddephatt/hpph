@@ -1,40 +1,19 @@
 ---
 layout: default
 ---
-
 <div class="home-image">
 
 </div>
 
 <div class="listings">
 
-  <ul class="listings--social">
-    {% if site.twitter_username %}
-      <li><a href="//twitter.com/{{ site.twitter_username }}" target="_blank">{% include icons/twitter.svg %}</a></li>
-    {% endif %}
-    {% if site.facebook_username %}
-      <li><a href="//facebook.com/{{ site.facebook_username }}" target="_blank">{% include icons/facebook.svg %}</a></li>
-    {% endif %}
-    {% if site.instagram_username %}
-      <li><a href="//instagram.com/{{ site.instagram_username }}" target="_blank">{% include icons/instagram.svg %}</a></li>
-    {% endif %}
-  </ul>
-  <div class="listings--header">
-    {% include logo.svg %}
-    <div class="disclaimer">We’re busy making vital improvements to our website. In the meantime, see the listings below or <a href="./uploads/HPPH_May.pdf">download our May programme</a>.
-    <button class="disclaimer-close">&times;</button></div>
-  </div>
-  <div class="listings--content">
-    {{ content }}
-  </div>
-  <div class="listings--footer">
-    <div class="listings--footer--contact">
-      <ul>
-        <li>Tel: 0113 275 2045</li>
-        <li>Email: <a href="mailto:info@hydeparkpicturehouse.co.uk">info@hydeparkpicturehouse.co.uk</a></li>
-      </ul>
-    </div>
-    <a href="https://www.jack-roe.co.uk/websales/sales/hydlee/start" class="button">Buy tickets</a>
-  </div>
+  {% include social.html %}
+  {% include header.html %}
+  {% include listings/content.html %}
+  {% include listings/footer.html %}
 
+</div>
+
+<div class="listing">
+  {{ content }}
 </div>

@@ -4,4 +4,6 @@ certificate: 18
 runtime: ??
 screenings:
   - date: 2018-04-24 18:20
+    labels:
+    - Tuesday Wonder
 ---
