@@ -6,18 +6,18 @@ fields:
   label: Title
   type: text
   hidden: false
-  default:
+  default: 
 - name: certificate
   label: Certificate
   type: text
   hidden: false
-  default:
+  default: 
 - name: runtime
   label: Runtime
   type: text
   hidden: false
   description: In minutes
-  default:
+  default: 
 - name: image
   label: Image
   type: field_group
@@ -31,4 +31,4 @@ fields:
     label: Alt text
     type: text
     hidden: false
-    default:
+    default: 

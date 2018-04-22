@@ -6,12 +6,12 @@ fields:
   label: Date & Time
   type: datetime
   hidden: false
-  default:
+  default: 
 - name: Tags
   label: Tags
   type: tag_list
   hidden: false
-  default:
+  default: 
 - type: select
   name: film
   label: Film
