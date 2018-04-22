@@ -4,7 +4,7 @@ is_partial: false
 fields:
 - name: date
   label: Date & Time
-  type: date
+  type: datetime
   hidden: false
   default:
 - name: Tags
