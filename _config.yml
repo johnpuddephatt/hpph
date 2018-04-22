@@ -40,6 +40,8 @@ collections:
   films:
     output: true
     permalink: /film/:title/index.html
+  screenings:
+    output: false
 
 defaults:
   - scope:
